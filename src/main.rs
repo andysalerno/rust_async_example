@@ -10,7 +10,8 @@ async fn main() {
     let future_a = MockServer::read_from_address("192.168.1.117");
     let future_b = MockServer::read_from_address("127.0.0.1");
 
-    // By themselves, futures do nothing unless a runtime is executing them.
+    // By themselves, futures do nothing unless a runtime is executing them
+    // (or if we .await them ourself).
     // So we use the runtime crate to spawn our futures.
     let handle_a = runtime::spawn(future_a);
     let handle_b = runtime::spawn(future_b);
