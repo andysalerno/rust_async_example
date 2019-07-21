@@ -2,8 +2,8 @@ use std::future::Future;
 use std::pin::Pin;
 use std::task::Context;
 use std::task::Poll;
-use std::time::Duration;
 use std::task::Waker;
+use std::time::Duration;
 
 /// Not currently possible in Nightly
 /// (trait functions cannot be async :( )
